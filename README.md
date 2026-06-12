@@ -3,7 +3,7 @@
 > **Tu marca personal, con un sistema detrás.**
 > FARO es un copiloto de marca personal que vive en tu computador, funciona con tu plan de Claude (Pro/Max), se especializa en TU marca a medida que lo usas, y te acompaña desde "no tengo nada publicado" hasta "vivo de mi autoridad".
 
-**Versión:** 1.1 (ver `VERSION` y `CHANGELOG.md`) · **Idioma:** español · **Dependencias:** ninguna (solo Claude Code) · **Licencia:** úsalo, compártelo, adáptalo.
+**Versión:** 1.1 (ver `VERSION` y `CHANGELOG.md`) · **Idioma:** español · **Dependencias:** ninguna (solo Claude Code) · **Licencia:** MIT — úsalo, compártelo, adáptalo (ver `LICENSE`).
 
 ---
 

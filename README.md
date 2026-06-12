@@ -77,6 +77,7 @@ FARO/
 ├── skills/              ← los rituales: iniciar, diagnosticar, planificar, guionizar…
 ├── feedback/            ← aprendizajes sobre FARO (compartibles, sin datos de tu marca)
 ├── VERSION              ← versión de tu copia · CHANGELOG.md ← historia del sistema
+├── site/                ← landing de faro.guillebecerrao.cl (sitio del proyecto — NO es parte del producto)
 └── brand/               ← TU marca (nace vacía; la entrevista la llena; el uso la afina)
     ├── profile.md       ← quién eres, a quién le hablas, qué buscas
     ├── voice.md         ← cómo suenas

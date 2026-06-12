@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="lighthouse" class="js">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FARO — Sistema Operativo de Marca Personal</title>
+<meta name="description" content="FARO — un copiloto de marca personal que vive en tu computador, funciona con tu plan de Claude y te acompaña desde cero hasta vivir de tu autoridad.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ============================ NAV ============================ -->
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top" aria-label="FARO inicio">
+      <span class="markwrap" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="30" height="30" fill="none">
+          <path d="M12 2.5 13.4 7H10.6L12 2.5Z" fill="var(--accent)"/>
+          <circle cx="12" cy="8.4" r="2.1" fill="var(--accent)"/>
+          <path d="M9.2 10.4h5.6l1.4 10.8H7.8L9.2 10.4Z" stroke="var(--accent)" stroke-width="1.3" fill="none"/>
+          <path d="M8.6 14.2h6.8M8.2 17.6h7.6" stroke="var(--accent)" stroke-width="1.1" opacity=".7"/>
+          <path d="M14.3 7.6 21 5M14.3 9.2 20.5 11" stroke="var(--accent)" stroke-width="1" opacity=".45" stroke-linecap="round"/>
+        </svg>
+      </span>
+      <span class="word">FARO</span>
+    </a>
+    <nav class="nav-links">
+      <a href="#porque">Por qué</a>
+      <a href="#etapas">Etapas</a>
+      <a href="#squad">El squad</a>
+      <a href="#empezar">Empezar</a>
+    </nav>
+    <div class="nav-right">
+      <div class="switch" role="group" aria-label="Estilo visual">
+        <button data-set="lighthouse" aria-pressed="true"><span class="sw"></span><span class="lbl">Faro</span></button>
+        <button data-set="aurora" aria-pressed="false"><span class="sw"></span><span class="lbl">Aurora</span></button>
+        <button data-set="terminal" aria-pressed="false"><span class="sw"></span><span class="lbl">Terminal</span></button>
+      </div>
+      <a class="btn btn-primary" href="https://github.com/guillebecerrao/faro" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49v-1.7c-2.78.62-3.37-1.22-3.37-1.22-.46-1.18-1.11-1.5-1.11-1.5-.9-.64.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.36-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.7 0 0 .84-.28 2.75 1.05a9.3 9.3 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.4.2 2.44.1 2.7.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.79-4.57 5.05.36.32.68.94.68 1.9v2.81c0 .27.18.6.69.49A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z"/></svg>
+        <span class="lbl">GitHub</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+<!-- ============================ HERO ============================ -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow reveal"><span class="dot"></span>Sistema Operativo de Marca Personal · sobre Claude Code</span>
+      <h1 class="reveal">Tu marca personal,<br>con un <span class="lit">sistema</span> detrás.</h1>
+      <p class="sub reveal">Un copiloto que vive en tu computador, funciona con tu plan de Claude y se especializa en <b>tu</b> marca a medida que lo usas. Te acompaña desde <b>"no tengo nada publicado"</b> hasta <b>"vivo de mi autoridad"</b>.</p>
+      <div class="hero-cta reveal">
+        <a class="btn btn-primary" href="https://github.com/guillebecerrao/faro" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49v-1.7c-2.78.62-3.37-1.22-3.37-1.22-.46-1.18-1.11-1.5-1.11-1.5-.9-.64.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.36-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.7 0 0 .84-.28 2.75 1.05a9.3 9.3 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.4.2 2.44.1 2.7.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.79-4.57 5.05.36.32.68.94.68 1.9v2.81c0 .27.18.6.69.49A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z"/></svg>
+          Ver en GitHub
+        </a>
+        <a class="btn btn-ghost" href="#empezar">Cómo empezar →</a>
+      </div>
+      <div class="pills reveal">
+        <span class="pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Dependencias: <b>ninguna</b></span>
+        <span class="pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Costo extra: <b>$0</b></span>
+        <span class="pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Instalación: <b>copiar la carpeta</b></span>
+        <span class="pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Tus datos: <b>en tu máquina</b></span>
+      </div>
+    </div>
+
+    <!-- LIGHTHOUSE SCENE -->
+    <div class="scene reveal" aria-hidden="true">
+      <svg class="starfield" viewBox="0 0 400 420" preserveAspectRatio="xMidYMid slice">
+        <g fill="var(--ink)">
+          <circle cx="40" cy="60" r="1" opacity=".5"/><circle cx="120" cy="40" r="1.3" opacity=".7"/>
+          <circle cx="320" cy="80" r="1" opacity=".5"/><circle cx="360" cy="150" r="1.4" opacity=".6"/>
+          <circle cx="60" cy="170" r="1.1" opacity=".5"/><circle cx="300" cy="200" r="1" opacity=".4"/>
+          <circle cx="200" cy="30" r="1" opacity=".5"/><circle cx="250" cy="120" r="1.2" opacity=".55"/>
+          <circle cx="30" cy="250" r="1" opacity=".4"/><circle cx="370" cy="260" r="1.1" opacity=".5"/>
+        </g>
+      </svg>
+      <div class="beam-stage">
+        <div class="halo"></div>
+        <div class="beam b1"><i></i></div>
+        <div class="beam b2"><i></i></div>
+      </div>
+      <div class="tower">
+        <svg viewBox="0 0 200 300" fill="none">
+          <!-- rocks -->
+          <path d="M10 286c30-12 60-6 90-6s60-6 90 6v14H10v-14Z" fill="var(--panel-2)" opacity=".9"/>
+          <!-- tower body -->
+          <path d="M82 110h36l10 168H72L82 110Z" fill="var(--panel)" stroke="var(--line-2)" stroke-width="1.5"/>
+          <!-- stripes -->
+          <path d="M80 132h40M78 162h44M76 196h48M74 234h52" stroke="var(--accent)" stroke-width="7" opacity=".9" stroke-linecap="round"/>
+          <!-- gallery deck -->
+          <rect x="70" y="98" width="60" height="14" rx="3" fill="var(--panel-2)" stroke="var(--line-2)" stroke-width="1.3"/>
+          <!-- lamp room -->
+          <rect x="80" y="66" width="40" height="34" rx="4" fill="#05070e" stroke="var(--line-2)" stroke-width="1.3"/>
+          <g class="lamp-flicker">
+            <rect x="86" y="71" width="28" height="24" rx="2" fill="var(--accent)" opacity=".92"/>
+            <circle cx="100" cy="83" r="16" fill="var(--accent)" opacity=".45"/>
+          </g>
+          <!-- roof -->
+          <path d="M78 66 100 44l22 22H78Z" fill="var(--panel-2)" stroke="var(--line-2)" stroke-width="1.3"/>
+          <circle cx="100" cy="40" r="3" fill="var(--accent)"/>
+        </svg>
+      </div>
+      <div class="sea"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= 01 WHY ======================= -->
+<section class="section" id="porque">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="num">01 — DIFERENCIA</span>
+      <h2>Por qué FARO es distinto</h2>
+      <p class="lead">La mayoría no fracasa por falta de talento: fracasa por operar sin sistema y con consejos genéricos que no calzan con su etapa, su profesión ni su audiencia.</p>
+    </div>
+    <div class="cards">
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5 5-2Z" fill="currentColor" stroke="none" opacity=".5"/><path d="m15.5 8.5-2 5-5 2 2-5 5-2Z"/></svg></div>
+        <h3>Entiende tu etapa</h3>
+        <p>No es lo mismo nacer de cero que estar listo para monetizar. FARO diagnostica tu etapa y cambia su comportamiento: te empuja lo que corresponde y te <b>frena</b> lo que aún no toca.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.4" fill="currentColor"/></svg></div>
+        <h3>Se especializa en ti</h3>
+        <p>Arranca con una entrevista profunda que construye tu perfil. Después, cada sesión aprende de tus resultados. A los <b>3 meses</b>, sabe de tu marca más que cualquier curso.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="8" cy="9" r="3"/><circle cx="16" cy="9" r="3"/><path d="M3 19c0-2.5 2.2-4 5-4s5 1.5 5 4M13 19c0-2.5 2.2-4 5-4 1 0 1.9.2 2.6.6"/></svg></div>
+        <h3>Es un squad, no un chatbot</h3>
+        <p>Cinco especialistas — estrategia, guiones, calendario, red y reutilización — todos leyendo <b>tu perfil</b> antes de actuar.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= 02 CYCLE ======================= -->
+<section class="section" id="ciclo">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="num">02 — EL CICLO</span>
+      <h2>Cinco fases, en loop</h2>
+      <p class="lead">Tu compromiso mínimo: un plan semanal (<b>15 min</b>) y una revisión mensual (<b>30 min</b>). Lo demás es a demanda.</p>
+    </div>
+    <div class="cycle">
+      <div class="phase reveal"><div class="ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="2.5" fill="currentColor"/></svg></div><div class="pn">FASE 01</div><b>ENFOCAR</b><span>estrategia según tu etapa</span></div>
+      <div class="phase reveal"><div class="ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M4 9h16M9 3v4M15 3v4"/></svg></div><div class="pn">FASE 02</div><b>PLANIFICAR</b><span>ideas → calendario real</span></div>
+      <div class="phase reveal"><div class="ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 4h14v16H5zM9 8h6M9 12h6M9 16h3"/></svg></div><div class="pn">FASE 03</div><b>PRODUCIR</b><span>guiones con tu voz</span></div>
+      <div class="phase reveal"><div class="ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 11a8 8 0 0 1 8-8M4 16a3 3 0 0 1 3-3M7 20a3 3 0 0 0-3-3" /><circle cx="5" cy="19" r="1.5" fill="currentColor"/></svg></div><div class="pn">FASE 04</div><b>AMPLIFICAR</b><span>1 pieza → N canales</span></div>
+      <div class="phase reveal"><div class="ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5 18 18"/><circle cx="12" cy="12" r="3"/></svg></div><div class="pn">FASE 05</div><b>APRENDER</b><span>el sistema se afina contigo</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= 03 STAGES ======================= -->
+<section class="section" id="etapas">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="num">03 — EL RECORRIDO</span>
+      <h2>Las 5 etapas de una marca</h2>
+      <p class="lead">Cada etapa tiene su juego, sus métricas y su criterio de graduación. El error clásico del oficio es aplicar tácticas de una etapa estando en otra.</p>
+    </div>
+    <div class="stages">
+      <div class="stage reveal" style="--lvl:.25">
+        <div class="glow-edge"></div>
+        <div class="e">E0</div>
+        <div>
+          <h3>Chispa <span>— "sé que quiero, pero no he empezado"</span></h3>
+          <p>Foco: claridad de identidad y romper el hielo. <span class="brake">FARO frena:</span> multicanal, equipamiento, monetización.</p>
+          <span class="grad"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m22 10-10-5L2 10l10 5 10-5Z"/><path d="M6 12v5c0 1 2.7 3 6 3s6-2 6-3v-5"/></svg>Gradúas con identidad definida + 5-10 piezas publicadas</span>
+        </div>
+      </div>
+      <div class="stage reveal" style="--lvl:.4">
+        <div class="glow-edge"></div>
+        <div class="e">E1</div>
+        <div>
+          <h3>Cimientos <span>— "publico, pero casi nadie me ve"</span></h3>
+          <p>Foco: consistencia en 1 canal ancla, encontrar tu voz. <span class="brake">FARO frena:</span> perseguir virales, abrir más canales.</p>
+          <span class="grad"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m22 10-10-5L2 10l10 5 10-5Z"/><path d="M6 12v5c0 1 2.7 3 6 3s6-2 6-3v-5"/></svg>Gradúas con 3+ meses de cadencia + patrón claro de qué resuena</span>
+        </div>
+      </div>
+      <div class="stage reveal" style="--lvl:.58">
+        <div class="glow-edge"></div>
+        <div class="e">E2</div>
+        <div>
+          <h3>Tracción <span>— "algo está funcionando"</span></h3>
+          <p>Foco: duplicar lo que funciona, motor de reutilización, iniciar tu lista de email. <span class="brake">FARO frena:</span> dispersión, vender antes de tiempo.</p>
+          <span class="grad"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m22 10-10-5L2 10l10 5 10-5Z"/><path d="M6 12v5c0 1 2.7 3 6 3s6-2 6-3v-5"/></svg>Gradúas con lista propia creciendo + oportunidades entrantes</span>
+        </div>
+      </div>
+      <div class="stage reveal" style="--lvl:.78">
+        <div class="glow-edge"></div>
+        <div class="e">E3</div>
+        <div>
+          <h3>Autoridad <span>— "me empiezan a buscar"</span></h3>
+          <p>Foco: pieza ancla profunda, lead magnet, red estratégica y primeras ofertas. <span class="brake">FARO frena:</span> el miedo a vender.</p>
+          <span class="grad"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m22 10-10-5L2 10l10 5 10-5Z"/><path d="M6 12v5c0 1 2.7 3 6 3s6-2 6-3v-5"/></svg>Gradúas vendiendo con regularidad, no por suerte</span>
+        </div>
+      </div>
+      <div class="stage reveal" style="--lvl:1">
+        <div class="glow-edge"></div>
+        <div class="e">E4</div>
+        <div>
+          <h3>Motor <span>— "vivo (en parte) de esto"</span></h3>
+          <p>Foco: escalera de valor completa, comunidad, delegar producción. <span class="brake">FARO frena:</span> hacer todo a mano, abandonar el contenido raíz.</p>
+          <span class="grad"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5 5-2Z"/></svg>Horizonte: la marca como activo con opcionalidad</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= 04 SQUAD ======================= -->
+<section class="section" id="squad">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="num">04 — EL SQUAD</span>
+      <h2>Cinco especialistas, un perfil</h2>
+      <p class="lead">No necesitas nombrarlos — pide la tarea y FARO rutea. Pero puedes invocarlos directo cuando quieras.</p>
+    </div>
+    <div class="squad">
+      <div class="agent reveal">
+        <div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="m14 7-1.5 5.5L7 14l1.5-5.5L14 7Z" fill="currentColor" opacity=".5"/><path d="M12 2v3M12 19v3"/></svg></div>
+        <div><span class="cn">NORTE</span> · <span class="role">Estratega</span><p>Posicionamiento, nicho, canales, oferta y monetización. Arbitra qué se empuja y qué se frena según tu etapa.</p></div>
+      </div>
+      <div class="agent reveal">
+        <div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M5 19 17 7l3 3L8 22l-4 1 1-4Z"/><path d="m14 6 4 4"/></svg></div>
+        <div><span class="cn">TINTA</span> · <span class="role">Guionista</span><p>Videos, posts, carruseles, newsletters — escritos con TU voz, no con la de una IA genérica.</p></div>
+      </div>
+      <div class="agent reveal">
+        <div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></div>
+        <div><span class="cn">TEMPO</span> · <span class="role">Editor</span><p>Calendario realista según tu tiempo real, lotes de producción, consistencia sostenible.</p></div>
+      </div>
+      <div class="agent reveal">
+        <div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M9 13a4 4 0 0 0 5.7.3l2-2a4 4 0 0 0-5.6-5.7l-1.1 1.1"/><path d="M15 11a4 4 0 0 0-5.7-.3l-2 2a4 4 0 0 0 5.6 5.7l1.1-1.1"/></svg></div>
+        <div><span class="cn">LAZO</span> · <span class="role">Conector</span><p>Entrevistas, colaboraciones y red estratégica — las personas correctas, con dossier y follow-up.</p></div>
+      </div>
+      <div class="agent reveal">
+        <div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3 4 8v8l8 5 8-5V8l-8-5Z"/><path d="M12 3v18M4 8l8 5 8-5"/></svg></div>
+        <div><span class="cn">PRISMA</span> · <span class="role">Amplificador</span><p>Convierte 1 pieza ancla en 5-15 derivados adaptados a cada canal. El multicanal sin morir.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= 05 INSTALL ======================= -->
+<section class="section" id="empezar">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="num">05 — EMPEZAR</span>
+      <h2>Sí, es tan fácil como suena</h2>
+      <p class="lead">Requisito único: <b>Claude Code</b> con plan Pro o Max de Anthropic. Sin claves de API, sin servidores, sin costos por uso.</p>
+    </div>
+    <div class="install">
+      <div class="install-intro reveal">
+        <div class="encourage">
+          <div class="t"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/><circle cx="12" cy="12" r="4"/></svg>¿No sabes nada de GitHub? Perfecto.</div>
+          <p>No necesitas entender de código ni de programación. Si sabes <b>descargar un archivo y abrir una carpeta</b>, ya sabes instalar FARO. En serio: la mayoría lo tiene andando en menos de cinco minutos. Sigue los pasos de la derecha y listo. 🚀</p>
+        </div>
+        <p style="margin-top:22px" class="muted">FARO detectará que es tu primera vez y comenzará la <b style="color:var(--ink-soft)">entrevista de inicio</b> (~20-30 min). Al terminar, el sistema queda especializado en ti — en tu marca, tu voz y tu etapa.</p>
+      </div>
+
+      <div class="steps reveal">
+        <div class="step">
+          <div class="num">1</div>
+          <div>
+            <h4>Descarga la carpeta</h4>
+            <p>En la página de GitHub, pulsa el botón verde <b>«Code»</b> y luego <b>«Download ZIP»</b>. Descomprime el archivo donde quieras que viva tu marca.</p>
+            <a class="copy-btn" href="https://github.com/guillebecerrao/faro/archive/refs/heads/main.zip" style="margin-top:12px; width:max-content; text-decoration:none" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12M7 11l5 5 5-5M5 21h14"/></svg>Descargar ZIP directo
+            </a>
+          </div>
+        </div>
+        <div class="step">
+          <div class="num">2</div>
+          <div>
+            <h4>Abre Claude Desktop</h4>
+            <p>Entra a la pestaña <b>Cowork</b> de Claude Desktop y selecciona la carpeta <code style="font-family:var(--mono);color:var(--accent)">FARO</code> que acabas de descomprimir. Misma potencia que la terminal, interfaz mucho más amable.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="num">3</div>
+          <div>
+            <h4>Escribe esto y deja que FARO te guíe</h4>
+            <p>No hay más configuración. Solo conversa:</p>
+            <div class="cmd"><span class="c-txt" id="cmd">Lee CLAUDE.md. Quiero empezar con mi marca.</span>
+              <button class="copy-btn" data-copy="Lee CLAUDE.md. Quiero empezar con mi marca." aria-label="Copiar comando">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg><span class="cl">Copiar</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= 06 DAY TO DAY ======================= -->
+<section class="section" id="dia">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="num">06 — EL DÍA A DÍA</span>
+      <h2>Tú hablas. FARO ejecuta.</h2>
+    </div>
+    <div class="daily reveal">
+      <div class="row h"><div>Tú dices…</div><div>FARO hace…</div></div>
+      <div class="row"><div class="say">¿En qué etapa estoy?</div><div class="does">Diagnóstico + qué te falta para graduarte</div></div>
+      <div class="row"><div class="say">Arma mi plan de la semana</div><div class="does">Calendario realista por pilares y tiempo real</div></div>
+      <div class="row"><div class="say">Tengo una idea: …</div><div class="does">La captura y clasifica en tu banco de ideas</div></div>
+      <div class="row"><div class="say">Guioniza un video sobre X</div><div class="does">Guion con tu voz + hooks para testear</div></div>
+      <div class="row"><div class="say">Saca derivados de este video</div><div class="does">Mapa 1 → N piezas adaptadas por canal</div></div>
+      <div class="row"><div class="say">Revisión del mes</div><div class="does">Analiza resultados, aprende y recalibra</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= 07 FAQ ======================= -->
+<section class="section" id="faq">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="num">07 — PREGUNTAS</span>
+      <h2>Preguntas frecuentes</h2>
+    </div>
+    <div class="faq">
+      <details class="reveal"><summary>¿Me cobra algo aparte de mi plan de Claude?<span class="q-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></summary><div class="a"><p>No. FARO funciona dentro de Claude Code con tu plan Pro/Max. No usa claves de API ni servicios externos.</p></div></details>
+      <details class="reveal"><summary>¿Sirve si ya tengo una marca andando?<span class="q-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></summary><div class="a"><p>Sí — para eso existe el modelo de etapas. La entrevista detecta qué tienes construido y FARO arranca desde tu realidad.</p></div></details>
+      <details class="reveal"><summary>¿Sirve para empleabilidad y no solo para vender servicios?<span class="q-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></summary><div class="a"><p>Sí. Tu objetivo (servicios, empleo, producto, comunidad) se captura en el perfil y cambia las recomendaciones, los CTAs y las métricas que importan.</p></div></details>
+      <details class="reveal"><summary>¿Los consejos de plataformas no quedan obsoletos?<span class="q-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></summary><div class="a"><p>Los playbooks traen fecha de investigación y FARO tiene la instrucción de avisarte y revalidarlos en internet cada ~6 meses.</p></div></details>
+      <details class="reveal"><summary>¿Puedo compartirlo?<span class="q-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></summary><div class="a"><p>Sí: comparte la carpeta original (con <code>brand/</code> en blanco). Cada persona la copia, corre su entrevista y FARO se especializa en su marca.</p></div></details>
+      <details class="reveal"><summary>¿Cómo ayudo a que FARO mejore?<span class="q-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></summary><div class="a"><p>FARO registra las fricciones del sistema (nunca datos de tu marca) en <code>feedback/system-learnings.md</code> y te invitará a enviarlas a <b>hello@guillebecerrao.cl</b> — tú revisas y decides. Cada fricción que reportas mejora la versión que usarán los siguientes. Gracias 🙏</p></div></details>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= CTA BAND ======================= -->
+<section class="section band">
+  <div class="wrap inner reveal">
+    <span class="kicker">FARO no rema por ti</span>
+    <h2>Ilumina dónde están las rocas y hacia dónde está el puerto.</h2>
+    <p>Remar — grabar, publicar, conversar con tu gente — sigue siendo tuyo. Esa es la parte que construye la marca.</p>
+    <a class="btn btn-primary" href="https://github.com/guillebecerrao/faro" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49v-1.7c-2.78.62-3.37-1.22-3.37-1.22-.46-1.18-1.11-1.5-1.11-1.5-.9-.64.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.36-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.7 0 0 .84-.28 2.75 1.05a9.3 9.3 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.4.2 2.44.1 2.7.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.79-4.57 5.05.36.32.68.94.68 1.9v2.81c0 .27.18.6.69.49A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z"/></svg>
+      Empieza ahora en GitHub
+    </a>
+  </div>
+</section>
+</main>
+
+<!-- ======================= FOOTER ======================= -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="brand" href="#top">
+          <span class="markwrap" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="30" height="30" fill="none">
+              <path d="M12 2.5 13.4 7H10.6L12 2.5Z" fill="var(--accent)"/><circle cx="12" cy="8.4" r="2.1" fill="var(--accent)"/>
+              <path d="M9.2 10.4h5.6l1.4 10.8H7.8L9.2 10.4Z" stroke="var(--accent)" stroke-width="1.3" fill="none"/>
+              <path d="M8.6 14.2h6.8M8.2 17.6h7.6" stroke="var(--accent)" stroke-width="1.1" opacity=".7"/>
+            </svg>
+          </span>
+          <span class="word">FARO</span>
+        </a>
+        <p><b style="color:var(--ink-soft)">FARO v1.1</b> — sistema compartible de marca personal sobre Claude Code. Tus datos viven en tu máquina.</p>
+      </div>
+      <div class="foot-col">
+        <h5>Explora</h5>
+        <a href="#porque">Por qué FARO</a>
+        <a href="#etapas">Las 5 etapas</a>
+        <a href="#squad">El squad</a>
+        <a href="#empezar">Cómo empezar</a>
+      </div>
+      <div class="foot-col">
+        <h5>Enlaces</h5>
+        <a href="https://github.com/guillebecerrao/faro" target="_blank" rel="noopener">Repositorio en GitHub</a>
+        <a href="https://guillebecerrao.cl" target="_blank" rel="noopener">guillebecerrao.cl</a>
+        <a href="https://www.linkedin.com/in/guillebecerrao/" target="_blank" rel="noopener">LinkedIn /in/guillebecerrao</a>
+        <a href="mailto:hello@guillebecerrao.cl">hello@guillebecerrao.cl</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span class="credit">Idea original de <b>Guille Becerra</b> · co-creado con <b>Claude</b> (Anthropic)</span>
+      <span>IG / TikTok / YouTube: <em>@guillebecerrao</em></span>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
